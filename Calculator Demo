@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class TestCalc {
+
+    private int minFunction;
+    private int maxFunction;
+    public int z;
+
+
+
+    public  int getMinFunction() {
+        System.out.println("The Minimum is " +minFunction);
+       return minFunction;
+
+    }
+
+    public  int getMaxFunction() {
+        System.out.println("The Maximum is " +maxFunction);
+        return maxFunction;
+
+    }
+    public void setMinFunction(int newMin){
+        minFunction=newMin;
+
+   }
+    public void setMaxFunction(int newMax){
+        maxFunction=newMax;
+
+    }
+    public void Display(){
+        System.out.println("Testing the calculator");
+
+    }
+
+    public void Subtraction(int x, int y) {
+        z = x - y;
+        System.out.println("The difference between the given numbers: "+ z);
+    }
+    public void multiplication(int x, int y) {
+        z = x * y;
+        System.out.println("The product of the given numbers: "+ z);
+    }
+
+        public static void main(String [] args){
+    //declaring variables to store input and initializing them
+    int num1=0;
+    int num2=0;
+    char operator;
+    double answer=0.0;
+    //using the scanner to create a new object for the users input
+    Scanner scanObject= new Scanner(System.in);
+    System.out.println("Enter the first number");
+    num1 = scanObject.nextInt();
+    System.out.println("Enter Second number");
+    num2 = scanObject.nextInt();
+    System.out.println("Enter an Operator");
+    operator= scanObject.next().charAt(0);
+// creating a switch  to receive the operator and perform against it
+    switch (operator)
+    {
+        case'+' : answer=num1+num2;
+                break;
+        case'-' : answer=num1-num2;
+            break;
+        case'*' : answer=num1*num2;
+            break;
+        case'/' : answer=num1/num2;
+            break;
+        case '%' :answer=num1%num2;
+
+        break;
+        default: System.out.printf("Error! Enter correct operator");
+            return;
+
+
+    }
+    System.out.println(num1+ " "+operator+" "+num2+" = "+ answer);
