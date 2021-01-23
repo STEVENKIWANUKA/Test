@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class Operations1{
+    public void printf(){
+        System.out.println("This is a test");
+    }
+
+
+}
+public class Calculator extends TestCalc{
+    public static void main(String [] args){
+        int num3,num4;
+        Calculator calc= new Calculator();
+        calc.Display();
+
+            Scanner scanner3=new Scanner(System.in);
+            System.out.println("Enter a number");
+            num3= scanner3.nextInt();
+            Scanner scanner4=new Scanner(System.in);
+        System.out.println("Enter Second number");
+        num4=scanner4.nextInt();
+
+        calc.Subtraction(num3,num4);
+        calc.multiplication(num3,num4);
+        int num5=miniMum(num3,num4);
+        System.out.println("Minimum Value = " + num3);
+
+
+    }
+//method to find check for the minimum
+    private static int miniMum(int num3, int num4) {
+        int min;
+        if (num3 > num4)
+            min = num3;
+        else
+            min = num4;
+
+        return min;
+    }
+
+}
