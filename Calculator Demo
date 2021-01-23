@@ -75,3 +75,7 @@ public class TestCalc {
 
     }
     System.out.println(num1+ " "+operator+" "+num2+" = "+ answer);
+    
+    }
+    
+    }
